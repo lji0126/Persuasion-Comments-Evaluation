@@ -8,7 +8,7 @@
 
     Python 3.5 or higher
 
-    Tensorflow ?
+    Tensorflow >=1.0
 
 3.Data Format
 
