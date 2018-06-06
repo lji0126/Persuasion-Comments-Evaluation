@@ -14,10 +14,9 @@
 
 3.1 Dataset for persuasion comments evaluation
 
-        Our dataset used for persuasion comments evaluation is the same as Tan et al. (2016)[1]. The whole dataset 
-    consists of 3,456 training instances and 807 testing instances, where each instance includes an original post 
-    with one positive and one negative reply respectively. We randomly select 10% of the training instances to form 
-    the development set.
+        The whole dataset consists of 3,456 training instances and 807 testing instances, where each instance includes 
+    an original post with one positive and one negative reply respectively. We randomly select 10% of the training 
+    instances to form the development set.
 
 3.2 Annotated dataset for interactive argument pair extraction 
 
