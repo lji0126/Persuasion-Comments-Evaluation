@@ -67,6 +67,11 @@
 5.Citation
 
     If you find the implementation or datasets useful, please cite the following paper: 
+    
+    @article{Ji2018Incorporating, title={Incorporating Argument-Level Interactions for Persuasion Comments Evaluation
+    using Co-attention Model}, author={Lu Ji, Zhongyu Wei, Xiangkun Hu, Yang Liu, Qi Zhang and Xuanjing Huang}, 
+    year={2018}, publisher={COLING} }.
+    
     The detailed information about the paper will be released later.
     
 
