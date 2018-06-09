@@ -4,21 +4,18 @@
         Tensorflow Implementation of "Incorporating Argument-Level Interactions for Persuasion Comments Evaluation 
     using Co-attention Model". The dataset used in our paper can be download from the repository. 
 
-2.Requirements
+2.Data Format
 
-    Python 3.5 or higher
+2.1 Dataset for persuasion comments evaluation(CMV)
 
-    Tensorflow >=1.0
-
-3.Data Format
-
-3.1 Dataset for persuasion comments evaluation
-
-        The whole dataset consists of 3,456 training instances and 807 testing instances, where each instance includes 
-    an original post with one positive and one negative reply respectively. We randomly select 10% of the training 
-    instances to form the development set.
-
-3.2 Annotated dataset for interactive argument pair extraction 
+        This directory CMV contains pairs of argumentative threads made in reply to the same original post, one successful 
+    and one not (more details in Section 3.1 of the paper). Both files have the same format and store data for training and
+    heldout testing respectively. Each line is a json object for a pair. A pair has the following fields:
+        op_author, op_text, op_name, op_title, positive, negative.
+    "positive" is a list of replies in a rooted path-unit that won a delta from OP, while "negative" is a matching rooted 
+    path-unit that did not win a delta. "op_author", "op_text", "op_name" and "op_title" give information for the original post.  
+    
+2.2 Annotated dataset for interactive argument pair extraction 
 
         We sample 50 triples in the form of (original post, positive reply, negative reply) from the training set 
     and split these into 100 original post-reply pairs in the form of (original post, positive reply) and 
@@ -52,20 +49,11 @@
         (1) Reply 1 and 2 indicate the positive reply and negative reply, respectively. 
         (2) The argument on the left of "<<<===>>>" is from original post and the argument on the right is from reply.
         (3) <<<===>>> indicates the interactive relationship.
-        
- 4.Usage
-  
- 4.1 Persuasion comments evaluation: 
-  
-    python3 train.py
-    
- 4.2 Interactive argument pair extraction: 
  
-    python3 extract.py
     
-5.Citation
+3.Citation
 
-    If you find the implementation or datasets useful, please cite the following paper: 
+    If you find the datasets useful, please cite the following paper: 
     
     @article{Ji2018Incorporating, title={Incorporating Argument-Level Interactions for Persuasion Comments Evaluation
     using Co-attention Model}, author={Lu Ji, Zhongyu Wei, Xiangkun Hu, Yang Liu, Qi Zhang and Xuanjing Huang}, 
