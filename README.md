@@ -17,7 +17,12 @@
     rooted path-unit that did not win a delta. "op_author", "op_text", "op_name" and "op_title" give information 
     for the original post.  
     
-2.2 Annotated dataset for interactive argument pair extraction 
+2.2 Dataset for persuasion comments evaluation(pre_data)
+    
+        This is our preprocessing dataset. In preprocessing, we use NLTK for tokenization and lowercase conversion.
+    We also filter out stop words and low frequency words. The constructed word vocabulary contains 15,767 distinct words. 
+    
+2.3 Annotated dataset for interactive argument pair extraction 
 
         We sample 50 triples in the form of (original post, positive reply, negative reply) from the training set 
     and split these into 100 original post-reply pairs in the form of (original post, positive reply) and 
